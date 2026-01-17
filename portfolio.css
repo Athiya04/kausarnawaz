@@ -775,117 +775,7 @@ img {
     letter-spacing: 1px;
 }
 
-/* Portfolio Section */
-.portfolio-section {
-    background-color: var(--white);
-    padding: 80px 20px;
-    position: relative;
-}
 
-.portfolio-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-left: 100px;
-}
-
-.portfolio-title {
-    font-size: 48px;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    color: var(--dark-text);
-    margin-bottom: 50px;
-    line-height: 1;
-    text-align: center;
-    display: none; /* Hidden on desktop, shown on mobile */
-}
-
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.portfolio-item {
-    background: var(--gradient-pink);
-    height: 200px;
-    border-radius: 8px;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Specific portfolio item backgrounds - Text Only Design */
-.portfolio-item.manychat-bot {
-    background: linear-gradient(135deg, var(--soft-pink) 0%, var(--light-pink) 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.portfolio-item.hr-system {
-    background: linear-gradient(135deg, var(--light-pink) 0%, var(--accent-pink) 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.portfolio-item.social-strategy {
-    background: linear-gradient(135deg, var(--accent-pink) 0%, var(--soft-pink) 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.portfolio-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 30px rgba(212, 165, 184, 0.3);
-}
-
-.portfolio-overlay {
-    position: static;
-    background: transparent;
-    color: var(--dark-text);
-    padding: 20px;
-    transform: none;
-    transition: none;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.portfolio-item:hover .portfolio-overlay {
-    transform: none;
-}
-
-.portfolio-overlay h4 {
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 8px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--dark-text);
-}
-
-.portfolio-overlay p {
-    font-size: 14px;
-    margin: 0;
-    opacity: 0.8;
-    color: var(--dark-text);
-    line-height: 1.4;
-}
 
 /* Contact Section */
 .contact-intro {
@@ -1062,20 +952,6 @@ img {
         gap: 25px;
         font-size: 13px;
     }
-    
-    /* Portfolio adjustments for tablet landscape */
-    .portfolio-container {
-        padding-left: 50px;
-    }
-    
-    .portfolio-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 15px;
-    }
-    
-    .portfolio-item {
-        height: 160px;
-    }
 }
 
 /* Tablet Portrait (768px - 1023px) */
@@ -1155,28 +1031,6 @@ img {
     .side-label {
         font-size: 11px;
         left: 15px;
-    }
-    
-    /* Portfolio adjustments for tablet portrait */
-    .portfolio-container {
-        padding-left: 20px;
-    }
-    
-    .portfolio-title {
-        display: block;
-        font-size: 36px;
-        margin-bottom: 40px;
-    }
-    
-    .portfolio-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-    
-    .portfolio-item {
-        height: 140px;
-        max-width: 500px;
-        margin: 0 auto;
     }
 }
 
@@ -1418,48 +1272,6 @@ img {
     
     .cta-section p {
         font-size: 13px;
-    }
-    
-    /* Portfolio mobile landscape adjustments */
-    .portfolio-section {
-        padding: 50px 15px;
-    }
-    
-    .portfolio-container {
-        padding-left: 0;
-    }
-    
-    .portfolio-title {
-        display: block;
-        font-size: 32px;
-        margin-bottom: 30px;
-    }
-    
-    .portfolio-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        gap: 15px;
-        max-width: 100%;
-    }
-    
-    .portfolio-item {
-        height: 120px;
-        margin: 0 auto;
-        max-width: 400px;
-    }
-    
-    .portfolio-overlay {
-        padding: 15px;
-    }
-    
-    .portfolio-overlay h4 {
-        font-size: 16px;
-        margin-bottom: 5px;
-    }
-    
-    .portfolio-overlay p {
-        font-size: 13px;
-        line-height: 1.4;
     }
 }
 
@@ -1774,83 +1586,8 @@ img {
     .social-icon {
         font-size: 20px;
     }
-    
-    /* Portfolio mobile portrait adjustments */
-    .portfolio-section {
-        padding: 40px 10px;
-    }
-    
-    .portfolio-container {
-        padding-left: 0;
-    }
-    
-    .portfolio-title {
-        display: block;
-        font-size: 28px;
-        margin-bottom: 25px;
-    }
-    
-    .portfolio-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        gap: 12px;
-        max-width: 100%;
-    }
-    
-    .portfolio-item {
-        height: 100px;
-        margin: 0 auto;
-        max-width: 320px;
-        border-radius: 6px;
-    }
-    
-    .portfolio-overlay {
-        padding: 10px;
-    }
-    
-    .portfolio-overlay h4 {
-        font-size: 14px;
-        margin-bottom: 3px;
-        line-height: 1.2;
-    }
-    
-    .portfolio-overlay p {
-        font-size: 12px;
-        line-height: 1.3;
-    }
 }
 
 /* Extra small phones (280px - 320px) */
 @media (max-width: 320px) {
-    .portfolio-section {
-        padding: 30px 8px;
-    }
-    
-    .portfolio-container {
-        padding-left: 0;
-    }
-    
-    .portfolio-title {
-        font-size: 24px;
-        margin-bottom: 20px;
-    }
-    
-    .portfolio-item {
-        height: 90px;
-        max-width: 280px;
-    }
-    
-    .portfolio-overlay {
-        padding: 8px;
-    }
-    
-    .portfolio-overlay h4 {
-        font-size: 13px;
-        margin-bottom: 2px;
-    }
-    
-    .portfolio-overlay p {
-        font-size: 11px;
-        line-height: 1.2;
-    }
 }
