@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Test - Portfolio Work Section</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <style>
+        body { margin: 0; padding: 20px; }
+        .test-info {
+            background: #f0f0f0;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+        }
+        .viewport-info {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <div class="viewport-info">
+        Screen: <span id="screenSize"></span>
+    </div>
+    
+    <div class="test-info">
+        <h2>Mobile Responsiveness Test - Portfolio Work Section</h2>
+        <p>This page tests the mobile responsiveness of the portfolio work section. Resize your browser or view on different devices to see the responsive behavior.</p>
+        <ul>
+            <li><strong>Desktop (1024px+):</strong> 2 columns with left padding</li>
+            <li><strong>Tablet Landscape (768-1024px):</strong> 2 columns</li>
+            <li><strong>Mobile Landscape (481-767px):</strong> 1 column, centered</li>
+            <li><strong>Mobile Portrait (320-480px):</strong> 1 column, smaller height</li>
+        </ul>
+    </div>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="side-label">PROJECT SHOWCASE</div>
+        <div class="portfolio-grid">
+            <div class="portfolio-item whatsapp-campaign">
+                <div class="portfolio-overlay">
+                    <h4>WhatsApp Campaign Automation</h4>
+                    <p>Bulk messaging system with 95% delivery rate</p>
+                </div>
+            </div>
+            <div class="portfolio-item manychat-bot">
+                <div class="portfolio-overlay">
+                    <h4>ManyChat Bot Development</h4>
+                    <p>Instagram & WhatsApp chatbot solutions</p>
+                </div>
+            </div>
+            <div class="portfolio-item hr-system">
+                <div class="portfolio-overlay">
+                    <h4>HR Management System</h4>
+                    <p>Complete recruitment & payroll solution</p>
+                </div>
+            </div>
+            <div class="portfolio-item social-strategy">
+                <div class="portfolio-overlay">
+                    <h4>Social Media Strategy</h4>
+                    <p>Multi-platform marketing campaigns</p>
+                </div>
+            </div>
+            <div class="portfolio-item performance-analytics">
+                <div class="portfolio-overlay">
+                    <h4>Performance Analytics</h4>
+                    <p>Data-driven marketing insights</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function updateScreenSize() {
+            document.getElementById('screenSize').textContent = window.innerWidth + 'x' + window.innerHeight;
+        }
+        
+        updateScreenSize();
+        window.addEventListener('resize', updateScreenSize);
+    </script>
+</body>
+</html>
