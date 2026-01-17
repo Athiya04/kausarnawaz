@@ -801,37 +801,64 @@ img {
     cursor: pointer;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    /* Ensure images load properly on all devices */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
 }
 
 /* Specific portfolio item backgrounds */
 .portfolio-item.whatsapp-campaign {
     background-image: url('photos/whats.jpeg');
     background-color: var(--light-pink);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .portfolio-item.manychat-bot {
     background-image: linear-gradient(rgba(212, 165, 184, 0.3), rgba(212, 165, 184, 0.3)), 
                       url('photos/social media.jpeg');
+    background-color: var(--soft-pink);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .portfolio-item.hr-system {
     background-image: linear-gradient(rgba(212, 165, 184, 0.3), rgba(212, 165, 184, 0.3)), 
                       url('photos/hr.jpeg');
+    background-color: var(--light-pink);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .portfolio-item.social-strategy {
-    background-image: linear-gradient(rgba(212, 165, 184, 0.3), rgba(212, 165, 184, 0.3)), 
-                      url('https://images.unsplash.com/photo-1611926653458-09294b3142bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');
-}
-
-.portfolio-item.influencer-collab {
-    background-image: linear-gradient(rgba(212, 165, 184, 0.3), rgba(212, 165, 184, 0.3)), 
-                      url('https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');
+    background-image: linear-gradient(rgba(212, 165, 184, 0.4), rgba(212, 165, 184, 0.4)), 
+                      url('photos/pic.jpeg');
+    background-color: var(--soft-pink);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .portfolio-item.performance-analytics {
-    background-image: linear-gradient(rgba(212, 165, 184, 0.3), rgba(212, 165, 184, 0.3)), 
-                      url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');
+    background: var(--gradient-pink);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.portfolio-item.performance-analytics::before {
+    content: '📊';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    opacity: 0.7;
 }
 
 .portfolio-item:hover {
@@ -1405,6 +1432,19 @@ img {
         height: 140px;
         margin: 0 auto;
         max-width: 400px;
+        background-size: cover !important;
+        background-position: center !important;
+    }
+    
+    /* Ensure images load properly on mobile */
+    .portfolio-item.whatsapp-campaign,
+    .portfolio-item.manychat-bot,
+    .portfolio-item.hr-system,
+    .portfolio-item.social-strategy {
+        background-attachment: scroll;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
     }
     
     .portfolio-overlay {
@@ -1749,6 +1789,20 @@ img {
         height: 120px;
         margin: 0 auto;
         max-width: 320px;
+        background-size: cover !important;
+        background-position: center !important;
+        background-attachment: scroll !important;
+    }
+    
+    /* Force proper image loading on small screens */
+    .portfolio-item.whatsapp-campaign,
+    .portfolio-item.manychat-bot,
+    .portfolio-item.hr-system,
+    .portfolio-item.social-strategy {
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
     }
     
     .portfolio-overlay {
