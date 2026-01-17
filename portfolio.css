@@ -799,66 +799,55 @@ img {
     overflow: hidden;
     transition: transform 0.3s ease;
     cursor: pointer;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    /* Ensure images load properly on all devices */
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Specific portfolio item backgrounds */
+/* Specific portfolio item backgrounds - Text Only Design */
 .portfolio-item.whatsapp-campaign {
-    background-image: url('photos/whats.jpeg');
-    background-color: var(--light-pink);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: var(--gradient-pink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .portfolio-item.manychat-bot {
-    background-image: linear-gradient(rgba(212, 165, 184, 0.3), rgba(212, 165, 184, 0.3)), 
-                      url('photos/social media.jpeg');
-    background-color: var(--soft-pink);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: linear-gradient(135deg, var(--soft-pink) 0%, var(--light-pink) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .portfolio-item.hr-system {
-    background-image: linear-gradient(rgba(212, 165, 184, 0.3), rgba(212, 165, 184, 0.3)), 
-                      url('photos/hr.jpeg');
-    background-color: var(--light-pink);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: linear-gradient(135deg, var(--light-pink) 0%, var(--accent-pink) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .portfolio-item.social-strategy {
-    background-image: linear-gradient(rgba(212, 165, 184, 0.4), rgba(212, 165, 184, 0.4)), 
-                      url('photos/pic.jpeg');
-    background-color: var(--soft-pink);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: linear-gradient(135deg, var(--accent-pink) 0%, var(--soft-pink) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .portfolio-item.performance-analytics {
     background: var(--gradient-pink);
-    background-size: cover;
-    background-position: center;
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
+/* Remove the icon from performance analytics */
 .portfolio-item.performance-analytics::before {
-    content: '📊';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 48px;
-    opacity: 0.7;
+    display: none;
 }
 
 .portfolio-item:hover {
@@ -867,33 +856,39 @@ img {
 }
 
 .portfolio-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(transparent, rgba(212, 165, 184, 0.9));
-    color: white;
+    position: static;
+    background: transparent;
+    color: var(--dark-text);
     padding: 20px;
-    transform: translateY(100%);
-    transition: transform 0.3s ease;
+    transform: none;
+    transition: none;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .portfolio-item:hover .portfolio-overlay {
-    transform: translateY(0);
+    transform: none;
 }
 
 .portfolio-overlay h4 {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     text-transform: uppercase;
     letter-spacing: 1px;
+    color: var(--dark-text);
 }
 
 .portfolio-overlay p {
     font-size: 14px;
     margin: 0;
-    opacity: 0.9;
+    opacity: 0.8;
+    color: var(--dark-text);
+    line-height: 1.4;
 }
 
 /* Contact Section */
@@ -1429,22 +1424,9 @@ img {
     }
     
     .portfolio-item {
-        height: 140px;
+        height: 120px;
         margin: 0 auto;
         max-width: 400px;
-        background-size: cover !important;
-        background-position: center !important;
-    }
-    
-    /* Ensure images load properly on mobile */
-    .portfolio-item.whatsapp-campaign,
-    .portfolio-item.manychat-bot,
-    .portfolio-item.hr-system,
-    .portfolio-item.social-strategy {
-        background-attachment: scroll;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
     }
     
     .portfolio-overlay {
@@ -1452,11 +1434,12 @@ img {
     }
     
     .portfolio-overlay h4 {
-        font-size: 14px;
+        font-size: 16px;
+        margin-bottom: 5px;
     }
     
     .portfolio-overlay p {
-        font-size: 12px;
+        font-size: 13px;
     }
 }
 
@@ -1786,35 +1769,21 @@ img {
     }
     
     .portfolio-item {
-        height: 120px;
+        height: 100px;
         margin: 0 auto;
         max-width: 320px;
-        background-size: cover !important;
-        background-position: center !important;
-        background-attachment: scroll !important;
-    }
-    
-    /* Force proper image loading on small screens */
-    .portfolio-item.whatsapp-campaign,
-    .portfolio-item.manychat-bot,
-    .portfolio-item.hr-system,
-    .portfolio-item.social-strategy {
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
     }
     
     .portfolio-overlay {
-        padding: 12px;
+        padding: 10px;
     }
     
     .portfolio-overlay h4 {
-        font-size: 13px;
+        font-size: 14px;
         margin-bottom: 3px;
     }
     
     .portfolio-overlay p {
-        font-size: 11px;
+        font-size: 12px;
     }
 }
